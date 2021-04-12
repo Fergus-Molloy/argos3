@@ -79,21 +79,6 @@ namespace argos {
                                          ToRadians(cRotOffsetEuler[1]),
                                          ToRadians(cRotOffsetEuler[2]));
          }
-         /* Parse and look up the anchor */
-         if (NodeAttributeExists(t_tree, "anchor")) {
-           std::string strAnchorId;
-           GetNodeAttribute(t_tree, "anchor", strAnchorId);
-           /*
-            * NOTE: here we get a reference to the embodied entity
-            * This line works under the assumption that:
-            * 1. the RABEquippedEntity has a parent;
-            * 2. the parent has a child whose id is "body"
-            * 3. the "body" is an embodied entity
-            * If any of the above is false, this line will bomb out.
-            */
-           m_pcEntityBody = &GetParent().GetComponent<CEmbodiedEntity>("body");
-           m_psAnchor = &m_pcEntityBody->GetAnchor(strAnchorId);
-         }
          /* Get message size */
          size_t unMsgSize;
          GetNodeAttribute(t_tree, "msg_size", unMsgSize);

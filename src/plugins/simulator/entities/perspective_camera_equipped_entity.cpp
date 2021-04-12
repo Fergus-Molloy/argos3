@@ -64,20 +64,6 @@ namespace argos {
          GetNodeAttributeOrDefault(t_tree, "image_width", m_nImagePxWidth, m_nImagePxWidth);
          GetNodeAttributeOrDefault(t_tree, "image_height", m_nImagePxHeight, m_nImagePxHeight);
          SetImagePxSize(m_nImagePxWidth, m_nImagePxHeight);
-         if (NodeAttributeExists(t_tree, "anchor")) {
-           std::string strAnchorId;
-           GetNodeAttribute(t_tree, "anchor", strAnchorId);
-           /*
-            * NOTE: here we get a reference to the embodied entity
-            * This line works under the assumption that:
-            * 1. the PerspectiveCameraEquippedEntity has a parent;
-            * 2. the parent has a child whose id is "body"
-            * 3. the "body" is an embodied entity
-            * If any of the above is false, this line will bomb out.
-            */
-           auto& cBody = GetParent().GetComponent<CEmbodiedEntity>("body");
-           m_psAnchor = &cBody.GetAnchor(strAnchorId);
-         }
       }
       catch(CARGoSException& ex) {
          THROW_ARGOSEXCEPTION_NESTED("Error initializing the perspective camera equipped entity \"" << GetId() << "\"", ex);
