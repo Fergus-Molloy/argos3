@@ -51,8 +51,8 @@
       </links>
       <devices>
         <radios medium="radio">
-           <radio id="radio_rx" anchor="base" range="0.09" position=".05,0,.0125"/>
-           <radio id="radio_tx" anchor="base" range="0.09" position="-.05,0,.0125"/>
+           <radio id="radio_rx" anchor="base" range="0.2" position=".05,0,.0125"/>
+           <radio id="radio_tx" anchor="base" range="0.2" position="-.05,0,.0125"/>
         </radios>
         <leds medium="leds">
            <led id="led" anchor="base" color="0,0,0,0" offset="0,0,.025"/>
@@ -60,23 +60,6 @@
       </devices>
     </prototype>
     <prototype id="repeater1" movable="true">
-      <body position="-0.06,0.06,0" orientation="45,0,0" />
-      <controller config="repeater"/>
-      <links ref="base">
-        <link id="base" geometry="box" size=".1,.04,.025" mass="0.1"
-              position="0,0,0" orientation="0,0,0" />
-      </links>
-      <devices>
-        <radios medium="radio">
-           <radio id="radio_rx" anchor="base" range="0.09" position=".05,0,.0125"/>
-           <radio id="radio_tx" anchor="base" range="0.09" position="-.05,0,.0125"/>
-        </radios>
-        <leds medium="leds">
-           <led id="led" anchor="base" color="0,0,0,0" offset="0,0,.025"/>
-        </leds>
-      </devices>
-    </prototype>
-    <prototype id="repeater2" movable="true">
       <body position="-0.06,-0.06,0" orientation="135,0,0" />
       <controller config="repeater"/>
       <links ref="base">
@@ -85,32 +68,14 @@
       </links>
       <devices>
         <radios medium="radio">
-           <radio id="radio_rx" anchor="base" range="0.09" position=".05,0,.0125"/>
-           <radio id="radio_tx" anchor="base" range="0.09" position="-.05,0,.0125"/>
+           <radio id="radio_rx" anchor="base" range="0.2" position=".05,0,.0125"/>
+           <radio id="radio_tx" anchor="base" range="0.2" position="-.05,0,.0125"/>
         </radios>
         <leds medium="leds">
            <led id="led" anchor="base" color="0,0,0,0" offset="0,0,.025"/>
         </leds>
       </devices>
     </prototype>
-    <prototype id="repeater3" movable="true">
-      <body position="0.06,-0.06,0" orientation="-135,0,0" />
-      <controller config="repeater"/>
-      <links ref="base">
-        <link id="base" geometry="box" size=".1,.04,.025" mass="0.1"
-              position="0,0,0" orientation="0,0,0" />
-      </links>
-      <devices>
-        <radios medium="radio">
-           <radio id="radio_rx" anchor="base" range="0.09" position=".05,0,.0125"/>
-           <radio id="radio_tx" anchor="base" range="0.09" position="-.05,0,.0125"/>
-        </radios>
-        <leds medium="leds">
-           <led id="led" anchor="base" color="0,0,0,0" offset="0,0,.025"/>
-        </leds>
-      </devices>
-    </prototype>
-
   </arena>
 
   <!-- ******************* -->
